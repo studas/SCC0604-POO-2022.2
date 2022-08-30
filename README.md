@@ -2,7 +2,9 @@
 
 GitHub voltado para as listas da disciplina de Programação Orientada a Objetos (SCC0604) do 2º semestre de 2022 da Universidade de São Paulo.
 
-Alunos:
+
+
+## Alunos:
 
 Artur Brenner Weber - 12675451
 
