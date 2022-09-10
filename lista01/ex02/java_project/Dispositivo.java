@@ -9,7 +9,7 @@ class Dispositivo {
     boolean dispositivo_funciona = false;
     // logica para testar se um dispositivo funciona
     // tenta enviar e receber informações
-    dispositivo_funciona = true;
+      dispositivo_funciona = true;
     
     
     return dispositivo_funciona;
