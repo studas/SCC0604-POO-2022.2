@@ -1111,7 +1111,7 @@
 											"top": 165,
 											"width": 146.34521484375,
 											"height": 13,
-											"text": "+status: Status",
+											"text": "-status: Status",
 											"horizontalAlignment": 0
 										}
 									],
@@ -1624,6 +1624,7 @@
 								"$ref": "AAAAAAGDLd9zn8XoPZE="
 							},
 							"name": "status",
+							"visibility": "private",
 							"type": "Status"
 						}
 					],
