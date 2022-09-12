@@ -14,11 +14,11 @@ class Rede extends Dispositivo {
     }
   }
 
-  public void transmiteByte(byte data){
+  private void transmiteByte(byte data){
     //envia um byte pela rede
   }
 
-  public byte[] criarHeader(int size){
+  private byte[] criarHeader(int size){
     byte[] header = new byte[54];
     //logic to fill header based on information size
     return header;
