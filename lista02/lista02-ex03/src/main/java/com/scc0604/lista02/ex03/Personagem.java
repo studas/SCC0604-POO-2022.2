@@ -13,19 +13,28 @@ import java.util.*;
  */
 public class Personagem {
     private String nome;
-    private List<Superpoder> poderes;
-    private float vida;
+    private List<Superpoder> poderes = new ArrayList<Superpoder>();
+    private int vida;
     
     public String getNome(){
         return nome;
     }
     
     public int getTotalPoder(){
-        return poderes.size();
+        int poderTotal = 0;
+        for(int i = 0; i < poderes.size(); i++){
+            poderTotal += poderes.get(i).getCategoria();
+        }
+        return poderTotal;
     }
     
-    public float getVida(){
+    public int getVida(){
         return vida;
+    }
+    
+    public Superpoder getAlgumPoder(){
+        Random rand = new Random();
+        return poderes.get(rand.nextInt(poderes.size()));
     }
     
     public void setNome(String pNome){
@@ -36,7 +45,20 @@ public class Personagem {
         poderes.add(poder);
     }
     
-    public void setVida(float pVida){
+    public void setVida(int pVida){
         vida = pVida;
+    }
+    
+    public void atacar(Personagem pAtacado, Superpoder poder){
+        if(Math.random() >= 0.5){
+            System.out.println("Ataque mal sucedido");
+            return; //ataque mal sucedido
+        }
+        System.out.println(poder.getNome());
+        int vida_atual_atacado = pAtacado.getVida();
+        int nova_vida_atacado = vida_atual_atacado - poder.getCategoria();
+        pAtacado.setVida(nova_vida_atacado);
+        System.out.println("Ataque bem sucedido");        
+        System.out.println(pAtacado.getNome() + ": " + vida_atual_atacado + "hp -> " + nova_vida_atacado + "hp");
     }
 }

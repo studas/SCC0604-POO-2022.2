@@ -12,12 +12,10 @@ package com.scc0604.lista02.ex03;
 public class Superpoder {
     private int categoria;
     private String nome;
-    private float multiplicado_ataque;
     
-    public Superpoder(String pNome, int pCategoria, float pMultiplicado_ataque){
+    public Superpoder(String pNome, int pCategoria){
         nome = pNome;
         categoria = pCategoria;
-        multiplicado_ataque = Math.min(1, Math.max(0, pMultiplicado_ataque));
     }
     
     public int getCategoria(){
@@ -26,21 +24,5 @@ public class Superpoder {
     
     public String getNome(){
         return nome;
-    }
-    
-    public float getIntensidade(){
-        return multiplicado_ataque;
-    }
-    
-    public void setCategoria(int pCategoria){
-        categoria = pCategoria;
-    }
-    
-    public void setNome(String pNome){
-        nome = pNome;
-    }
-    
-    public void setIntensidade(float pMultiplicador_ataque){
-        multiplicado_ataque = Math.min(1, Math.max(0, pMultiplicador_ataque));
     }
 }
