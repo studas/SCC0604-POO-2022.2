@@ -15,18 +15,19 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        SuperHeroi heroi = new SuperHeroi("Robson", 100);
-        heroi.setNome("Fulgur");
-        Vilao vilao = new Vilao(150);
-        vilao.setNome("Nosbor");
+        SuperHeroi heroi = new SuperHeroi("Robson", "Fulgur", 100, 100);
+        Vilao vilao = new Vilao("Nosbor", 150, 80);
         
-        heroi.addPoder(new Superpoder("Raio Concentrado", 40));
-        heroi.addPoder(new Superpoder("Trovao", 20));
-        heroi.addPoder(new Superpoder("Raio terrestre", 60));
+        heroi.addAtaque(new Superpoder("Raio Concentrado", 40));
+        heroi.addAtaque(new Superpoder("Trovao", 20));
+        heroi.addAtaque(new Superpoder("Raio terrestre", 60));
+        heroi.addDefesa(new Superpoder("Parede de raios", 20));
         
-        vilao.addPoder(new Superpoder("Chicote de chamas", 10));
-        vilao.addPoder(new Superpoder("Tiro de fogo", 20));
-        vilao.addPoder(new Superpoder("Chamas ardentes", 30));
+        vilao.addAtaque(new Superpoder("Chicote de chamas", 10));
+        vilao.addAtaque(new Superpoder("Tiro de fogo", 20));
+        vilao.addAtaque(new Superpoder("Chamas ardentes", 30));
+        vilao.addDefesa(new Superpoder("Parede de fogo", 10));   
+        
 
         while(vilao.getVida() > 0 && heroi.getVida() > 0){
             System.out.println(heroi.getNome() + ": " + heroi.getVida() + "hp");
@@ -37,11 +38,11 @@ public class Main {
             double heroiAtaque = Math.random();
             
             if(heroiAtaque > vilaoAtaque){
-                Superpoder poder = heroi.getAlgumPoder();
+                Superpoder poder = heroi.getAlgumAtaque();
                 System.out.println(heroi.getNome() + " ataca " + vilao.getNome() + " com " + poder.getNome());
                 heroi.atacar(vilao, poder);
             } else {
-                Superpoder poder = vilao.getAlgumPoder();
+                Superpoder poder = vilao.getAlgumAtaque();
                 System.out.println(vilao.getNome() + " ataca " + heroi.getNome() + " com " + poder.getNome());
                 vilao.atacar(heroi, poder);                
             }

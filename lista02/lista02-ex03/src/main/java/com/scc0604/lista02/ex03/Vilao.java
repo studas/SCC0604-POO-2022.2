@@ -12,8 +12,8 @@ package com.scc0604.lista02.ex03;
 public class Vilao extends Personagem{
     int anos_prisao;
     
-    public Vilao(int vida){
-        setVida(vida);
+    public Vilao(String nome, int vida, int forca){
+        super(nome, vida, forca);
     }
     
     public int getAnosPrisao(){
