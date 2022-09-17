@@ -1,9 +1,5 @@
 package ClassesDeSistema;
 
-/**
- *
- * @author 12547187
- */
 public class Horario {
     private int hora;
     private int minuto;
