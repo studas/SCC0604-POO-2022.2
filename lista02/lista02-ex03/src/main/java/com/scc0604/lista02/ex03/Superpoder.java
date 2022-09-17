@@ -4,9 +4,9 @@ public class Superpoder {
     private int categoria;
     private String nome;
     
-    public Superpoder(String pNome, int pCategoria){
-        nome = pNome;
-        categoria = pCategoria;
+    public Superpoder(String nome, int categoria){
+        this.nome = nome;
+        this.categoria = categoria;
     }
     
     public int getCategoria(){
