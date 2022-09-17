@@ -1,10 +1,6 @@
 package ClassesDeSistema;
 import java.time.LocalDateTime;    
 
-/**
- *
- * @author 12547187
- */
 public class RelogioSistema {
     Data data;
     Horario horario;
