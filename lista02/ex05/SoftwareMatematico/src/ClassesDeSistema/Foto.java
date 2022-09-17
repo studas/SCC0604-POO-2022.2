@@ -1,9 +1,5 @@
 package ClassesDeSistema;
 
-/**
- *
- * @author 12547187
- */
 public class Foto {
     private String caminho;
     private Data data;
