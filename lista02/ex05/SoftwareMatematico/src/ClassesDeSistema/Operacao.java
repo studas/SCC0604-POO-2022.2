@@ -1,9 +1,5 @@
 package ClassesDeSistema;
 
-/**
- *
- * @author 12547187
- */
 public abstract class Operacao {
     protected abstract float operacao(float a, float b);
     
