@@ -1,10 +1,6 @@
 package softwarematematico;
 import ClassesDeSistema.*;
 
-/**
- *
- * @author 12547187
- */
 public class SoftwareMatematico {
     
 
