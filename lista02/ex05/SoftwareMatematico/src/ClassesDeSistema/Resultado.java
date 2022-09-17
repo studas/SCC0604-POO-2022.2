@@ -1,8 +1,4 @@
 package ClassesDeSistema;
-/**
- *
- * @author 12547187
- */
 public class Resultado {
     private float resultado;
     private Usuario requisitante;
