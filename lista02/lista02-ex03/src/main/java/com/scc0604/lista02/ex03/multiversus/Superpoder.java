@@ -1,4 +1,4 @@
-package com.scc0604.lista02.ex03;
+package com.scc0604.lista02.ex03.multiversus;
 
 public class Superpoder {
     private int categoria;

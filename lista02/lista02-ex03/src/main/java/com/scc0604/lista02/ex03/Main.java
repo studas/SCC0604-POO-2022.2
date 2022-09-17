@@ -1,5 +1,7 @@
 package com.scc0604.lista02.ex03;
 
+import com.scc0604.lista02.ex03.multiversus.*;
+
 public class Main {
 
     public static void main(String[] args) {

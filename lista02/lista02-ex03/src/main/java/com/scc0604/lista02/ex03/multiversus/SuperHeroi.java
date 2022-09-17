@@ -1,4 +1,4 @@
-package com.scc0604.lista02.ex03;
+package com.scc0604.lista02.ex03.multiversus;
 
 public class SuperHeroi extends Personagem{
     private String nome_vida_real;
