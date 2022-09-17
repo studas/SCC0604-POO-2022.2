@@ -1,9 +1,5 @@
 package ClassesDeSistema;
 
-/**
- *
- * @author 12547187
- */
 public enum Mes {
     JANEIRO,
     FEVEREIRO,
