@@ -1,9 +1,5 @@
 package ClassesDeSistema;
 
-/**
- *
- * @author 12547187
- */
 public class Usuario {
     private String nome;
     private int idade;
