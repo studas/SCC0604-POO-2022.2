@@ -1,9 +1,5 @@
 package ClassesDeSistema;
 
-/**
- *
- * @author 12547187
- */
 public class Data {
     private int dia;
     private Mes mes;
