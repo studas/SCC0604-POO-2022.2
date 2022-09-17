@@ -2,9 +2,6 @@ package com.scc0604.lista02.ex03;
 
 public class Main {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         SuperHeroi heroi = new SuperHeroi("Robson", "Fulgur", 100, 100);
         Vilao vilao = new Vilao("Nosbor", 150, 80);
