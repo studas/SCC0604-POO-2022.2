@@ -152,7 +152,7 @@
 											"top": 245,
 											"width": 171.60888671875,
 											"height": 13,
-											"text": "-numeroAlunos: int",
+											"text": "-numeroMatriculados: int",
 											"horizontalAlignment": 0
 										}
 									],
@@ -2447,7 +2447,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGDUncK6B8DLgY="
 							},
-							"name": "numeroAlunos",
+							"name": "numeroMatriculados",
 							"visibility": "private",
 							"type": "int"
 						}
