@@ -12,16 +12,4 @@ public class Matricula {
     private Aluno aluno;
 
     private Turma turma;
-
-    public void verificarMatricula() {
-        // TODO implement here
-    }
-
-    public void checarAluno() {
-        // TODO implement here
-    }
-
-    public void checarCurso() {
-        // TODO implement here
-    }
 }

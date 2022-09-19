@@ -9,7 +9,7 @@ public class Turma {
 
     private String codigo;
 
-    private int numeroAlunos;
+    private int numeroMatriculados;
     
     public Aluno retornaAlunos() {
         // TODO implement here
@@ -21,7 +21,7 @@ public class Turma {
         return "";
     }
 
-    public void adicionarAluno() {
+    public void adicionarMatriculado() {
         // TODO implement here
     }
 
