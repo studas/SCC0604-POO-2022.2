@@ -29,4 +29,9 @@ public class Produto {
         this.preco = preco;
         this.nomeloja = nomeloja;
     }
+    
+    @Override
+    public String toString() {
+        return "Preço: R$" + this.getPreco() + "\nNome da Loja: " + this.getNomeLoja();
+    }
 }
