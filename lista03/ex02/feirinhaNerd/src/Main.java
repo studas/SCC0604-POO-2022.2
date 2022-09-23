@@ -3,10 +3,6 @@ import java.util.Iterator;
 
 import Classes.*;
 
-/**
- *
- * @author 12547187
- */
 public class Main {
     public static void main(String[] args) {
         
