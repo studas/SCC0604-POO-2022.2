@@ -1,0 +1,2 @@
+Ao transformar a classe Prédio em abstrata o aplicativo Ex03.java para de funcionar pois é impossível instanciar uma classe abstrata.
+Os resultados do projeto rodado com Prédio como classe concreta estão no png 'Predio classe concreta.png'.
