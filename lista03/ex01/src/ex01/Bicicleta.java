@@ -1,14 +1,14 @@
 package ex01;
 
 public class Bicicleta extends Veiculo {
-    protected int numMarchas;
-    protected int aroRoda;
+    private int numMarchas;
+    private int aroRoda;
             
             
     Bicicleta (float precoBicicleta, String modeloBicicleta, String marcaBicicleta, String corBicicleta, int numMarchasBicicleta, int aroRodasBicicleta){
         super(precoBicicleta, modeloBicicleta, marcaBicicleta, corBicicleta);
-        numMarchas = numMarchasBicicleta;
-        aroRoda = aroRodasBicicleta;
+        this.numMarchas = numMarchasBicicleta;
+        this.aroRoda = aroRodasBicicleta;
     }
     
     void listarVerificacoes() {
@@ -20,6 +20,6 @@ public class Bicicleta extends Veiculo {
     }
     
     void limpar() {
-        System.out.println("Limpado");;
+        System.out.println("Limpo");;
     }
 }

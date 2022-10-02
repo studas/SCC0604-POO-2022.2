@@ -2,17 +2,17 @@ package ex01;
 
 public abstract class Veiculo {
     
-    protected float preco;
-    protected String modelo;
-    protected String marca;
-    protected String cor;
+    private float preco;
+    private String modelo;
+    private String marca;
+    private String cor;
     
     
     Veiculo (float precoVeiculo, String modeloVeiculo, String marcaVeiculo, String corVeiculo) {
-        preco = precoVeiculo;
-        modelo = modeloVeiculo;
-        marca = marcaVeiculo; 
-        cor = corVeiculo;
+        this.preco = precoVeiculo;
+        this.modelo = modeloVeiculo;
+        this.marca = marcaVeiculo; 
+        this.cor = corVeiculo;
     }
             
             
