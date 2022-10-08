@@ -35,9 +35,13 @@ public class ContaCorrente {
         }
     }
 
-    public void SetValorLimite(float valor){
-        creditoLimite = valor;
-        creditoRestante = creditoLimite;
+    public void SetValorLimite(float valor) throws SetLimiteInvalidoException{
+        if(valor < 0){
+            throw new SetLimiteInvalidoException();
+        }else{
+            creditoLimite = valor;
+            creditoRestante = creditoLimite;
+        }
     }
     
     public void PagarLimite(float valor) throws PagarLimiteInvalidoException{

@@ -9,11 +9,17 @@ public class Lista4ex04 {
         
         Scanner input =  new Scanner(System.in);
         
+        //DEFINIR LIMITE
+        
         System.out.println("Qual será o limite máximo da conta?");
         
         float valorOperado = input.nextInt();
         
-        conta.SetValorLimite(valorOperado);
+        try{
+            conta.SetValorLimite(valorOperado);
+        }catch(SetLimiteInvalidoException exc){
+            System.out.println(exc.getMessage()); 
+        }
         
         //DEPOSITO
         
