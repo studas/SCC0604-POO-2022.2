@@ -1,0 +1,23 @@
+#!/bin/sh
+
+# Le o nome da lista da semana
+echo "Digite o nome da lista da semana (nome do diretório onde ela se encontra sem o / ao final)"
+read -p "Nome: " lista_da_semana
+RESULTADO=$(ls $lista_da_semana)
+if [ "$RESULTADO" == "" ]; then
+  echo "ERRO!! Lista não encontrada"
+else 
+  # Cria README com nome dos alunos
+  echo -e "$lista_da_semana - SCC0604-POO-2022.2" > README.txt 
+  echo "Professor: Robson Leonardo" >> README.txt
+  echo "Alunos:" >> README.txt
+  echo -e "\tArtur Brenner Weber - 12675451" >> README.txt
+  echo -e "\tCarlos Henrique Craveiro Aquino Veras - 12547187" >> README.txt
+  echo -e "\tGustavo Moura Scarenci de Carvalho Ferreira - 12547792" >> README.txt
+  echo -e "\tMatheus Henrique Dias Cirillo - 12547750" >> README.txt
+
+  # Efetivamente "zippa" tudo
+  mv README.txt $lista_da_semana/
+  zip $lista_da_semana.zip -r $lista_da_semana/
+  rm -f README.txt
+fi
