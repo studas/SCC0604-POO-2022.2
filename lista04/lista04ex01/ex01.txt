@@ -1,0 +1,7 @@
+	O que é uma exceção? O que são exceções verificadas (checked) e não verificadas (unchecked)? Dê exemplos de comandos em Java que podem lançar exceções destes dois tipos
+
+	Uma exceção é uma classe de java (todas filhas da classe Exception) que são usadas para, de modo geral, indicar erros no código. Usando um bloco "try", um determinado código é rodado, caso uma exceção seja lançada nesse código, ele é capturado por um bloco "catch" onde um outro código será rodado, tratando-a. O Java já possui algumas exceções definidas mas o programador pode criar as suas próprias.
+	Por exemplo: num código onde o usuário dá um numerador e um denominador para fazer uma divisão. Idealmente faríamos esse código em um bloco try, e esse lançaria uma exceção caso o usuário colocasse 0 como denominador, então essa exceção seria capturada no bloco "catch" expecífico para esse tipo de exceção, onde dentro dele teria um código como quisessemos, printando uma mensagem "erro: divisão por 0!", por exemplo.
+	Existem as exceções "checked" e "unchecked":
+	-As checadas são normalmentes lançadas pela palavra-chave "thrown" e já é prevista em tempo de compilação. Se faz necessária a utilização do bloco "try-catch" para a compilação e tratamento dessas exceções.São todas filhas da classe Exception.
+	-Já as não-checadas não são diretamente previstas e acontecem em tempo de execução, também é possível tratar essas com o bloco "try-catch", apesar de não ser obrigatório para a compilação. São filhas da classe RuntimeException.
