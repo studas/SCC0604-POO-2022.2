@@ -1,0 +1,10 @@
+O que é o bloco finally do comando try catch? Dê um exemplo em que este bloco deve ser usado.
+
+
+
+O bloco 'finally' é usado quando é necessário executar um código mesmo quando tenha havido uma Exception.
+Esse bloco sempre vai ser executado, não importa quantos 'catchs' tenham sido executados antes, dessa forma para cada bloco de 'try' só pode existir um 'finally'.
+
+Essa função do é muito útil para garantir que códigos de limpeza de memoria sempre executem e não sejam pulados acideltamente por algum 'return', 'continue' ou 'break'.
+Por exemplo, ao trabalhar com streams é sempre importante fecha-las ao final do uso, todovia no meio do seu tratamento de erros é excessivamente complexo garantir que ela sempre será fechada.
+Assim, a solução para esse problema é inserir o 'stream.close();' no finally, garantindo que não importa o que aconteça tudo será devidamente fechado.
