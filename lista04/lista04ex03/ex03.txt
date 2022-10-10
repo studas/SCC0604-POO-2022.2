@@ -1,0 +1,4 @@
+Um bloco try e catch pode conter vários “catches”. Explique como e por que isso as vezes acontece. As exceções nos blocos catches podem ocorrer em qualquer ordem ou devem obedecer uma hierarquia? Pesquise e explique.
+
+
+Um bloco try e catch pode contar vários "catches" pois um bloco de código pode gerar mais de um tipo de exceção. Então se você deseja pegar diferentes tipos de exceções, você deve usar diferentes "catches". Os blocos de catch devem ser odenados do mais específico para o mais geral na hierarquia das exceções. Por exemplo: o "catch" de "ArithmeticException" deve vir antes do "catch" para "Exception", pois "ArithmeticException" é lançado para o erro especifico de divisão por 0, e "Exception" é lançado para um erro desconhecido, portanto deve estar abaixo do erro conhecido (divisão por 0).Lembrando que só é possível acontecer uma exceção por vez e apenas um bloco "catch" será executado.
