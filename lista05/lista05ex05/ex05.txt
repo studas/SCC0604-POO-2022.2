@@ -1,0 +1,27 @@
+Considerando o código Java abaixo, identifique quais objetos estão elegíveis para a coleta automática de lixo na 
+linha marcada com //aqui.
+
+class Pessoa {
+ 	public int idade;
+ 	public Pessoa amigo;
+}
+
+public class ExemploColetor {
+	public static void main(String[] args) {
+  		Pessoa p = new Pessoa();
+  		p.idade = 10;
+  		fazAmizade(p);
+  		//aqui
+	}
+
+	public static void fazAmizade (Pessoa p1) {
+		Pessoa p2 = new Pessoa();
+ 		Pessoa p3 = new Pessoa();
+  		p2.idade = 11;
+  		p1.amigo = p2;
+  		System.out.println("Amizade registrada");
+	}
+}
+
+RESPOSTA:
+Na linha "aqui", o objeto "Pessoa p3", está elegível para a coleta automática de lixo, pois esse objeto não é mais acessível no local.
