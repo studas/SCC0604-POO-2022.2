@@ -1,0 +1,13 @@
+https://qastack.com.br/programming/3197708/what-causes-a-java-lang-stackoverflowerror
+
+public static void main(String... args) {
+    Main main = new Main();
+
+    main.testMethod(1);
+}
+
+public void testMethod(int i) {
+    testMethod(i);
+
+    System.out.println(i);
+}
