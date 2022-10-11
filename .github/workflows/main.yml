@@ -9,7 +9,8 @@ inputs:
 jobs:
   create_zip:
     runs-on: ubuntu-latest
-      runs:|
+    steps:
+      run: |
         echo "Digite o nome da lista da semana (nome do diretório onde ela se encontra sem o / ao final)"
         RESULTADO=$(ls ${{ inputs.list-name }})
         if [ "$RESULTADO" == "" ]; then
