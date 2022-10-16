@@ -1,0 +1,30 @@
+name: Zip project
+on:
+  milestone:
+    types: [closed]
+inputs:
+  list-name:
+    description: 'The name of the milestone.'
+    required: true
+jobs:
+  create_zip:
+    runs-on: ubuntu-latest
+    steps:
+      run: |
+        echo "Digite o nome da lista da semana (nome do diretório onde ela se encontra sem o / ao final)"
+        RESULTADO=$(ls ${{ inputs.list-name }})
+        if [ "$RESULTADO" == "" ]; then
+          echo "ERRO!! Lista não encontrada"
+        else 
+          echo -e "inputs.list-name - SCC0604-POO-2022.2" > README.txt 
+          echo "Professor:Robson Leonardo" >> README.txt
+          echo "Alunos:" >> README.txt
+          echo -e "\tArtur Brenner Weber - 12675451" >> README.txt
+          echo -e "\tCarlos Henrique Craveiro Aquino Veras - 12547187" >> README.txt
+          echo -e "\tGustavo Moura Scarenci de Carvalho Ferreira - 12547792" >> README.txt
+          echo -e "\tMatheus Henrique Dias Cirillo - 12547750" >> README.txt
+
+          mv README.txt inputs.list-name/
+          zip $lista_da_semana.zip -r $lista_da_semana/
+          rm -f README.txt
+        fi
