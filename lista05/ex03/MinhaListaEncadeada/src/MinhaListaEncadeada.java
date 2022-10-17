@@ -34,7 +34,12 @@ public class MinhaListaEncadeada {
     public void removeEspecificado (int dadoRemover) {
         Elemento aux = inicio;
         Elemento anterior = inicio;
-
+        
+        if (inicio.valor == dadoRemover) {
+            inicio = inicio.proximo;
+            return;
+        }
+        
         while (aux.valor != dadoRemover) {
             anterior = aux;
             if (aux.proximo == null) {
@@ -42,6 +47,10 @@ public class MinhaListaEncadeada {
                 return; 
             }
             aux = aux.proximo;
+        }
+        
+        if (aux == fim) {
+            fim = anterior;
         }
 
         anterior.proximo = aux.proximo;

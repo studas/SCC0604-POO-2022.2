@@ -6,7 +6,7 @@ public class Main {
         lista.insereFinal(38);
         lista.imprimeLista();
         System.out.println("");
-        lista.removeEspecificado(3);
+        lista.removeEspecificado(38);
         lista.imprimeLista();
     }
 }
