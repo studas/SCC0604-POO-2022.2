@@ -10,15 +10,19 @@
 
 int main(int argc, char** argv) {
     
-    srand (time(NULL));
+    srand(time(NULL));
     
     int n; 
     std::cin >> n;
     
     std::vector<NumComplexo> meuVetor;
+    
+    std::cout << "Sorteando " << n << " números complexos..." << std::endl;
 
     for(int i = 0; i < n;i++){
-        meuVetor.push_back(NumComplexo(rand()%100,rand()%100));
+        NumComplexo randComplexo(rand()%100,rand()%100);
+        meuVetor.push_back(randComplexo);
+        std::cout << randComplexo << std::endl;
     }
     
     NumComplexo *somaComplexo = new NumComplexo(0,0);
@@ -34,7 +38,7 @@ int main(int argc, char** argv) {
         *somaComplexo = *somaComplexo + elemento;
     }*/
     
-    std::cout << *somaComplexo << std::endl;
+    std::cout << "Soma dos números complexos sorteados:" <<*somaComplexo << std::endl;
     delete(somaComplexo);//Livra a memória deletando todos os objetos utilizados no programa.
     
     return 0;
