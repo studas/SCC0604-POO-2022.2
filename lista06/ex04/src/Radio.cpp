@@ -1,7 +1,7 @@
 #include "Radio.hpp"
 
-Radio::Radio(bool isLigado, float estacao, bool amfm) -> void{
-    this->_isLigado = isLigado;
+Radio::Radio(float estacao, bool amfm) {
+    this->_isLigado = 0;
     this->_estacao = estacao;
     this->_amfm = amfm;
 }

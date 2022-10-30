@@ -12,9 +12,7 @@ auto Relogio::definirHoras(int horaDef, int minutoDef, int segundoDef) -> void {
 } 
 
 auto Relogio::definirAlarme(int horaAlarme, int minutoAlarme, int segundoAlarme) -> void {
-    if (this->_horas == horaAlarme && this->_minutos == minutoAlarme && this->_segundos == segundoAlarme) {
-        std::cout << "ACORDA!!!\n";
-    } else {
-        return;
-    }
+    this->_horasAlarme = horaAlarme;
+    this->_minutosAlarme = minutoAlarme;
+    this->_segundosAlarme = segundoAlarme;
 }

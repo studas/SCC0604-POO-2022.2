@@ -7,7 +7,7 @@ private:
     bool _amfm;
 
 public:
-    Radio(bool isLigado, float estacao, bool amfm);
+    Radio(float estacao, bool amfm);
     auto setarEstacao(float estacao) -> void;
     auto mudarAmFm(bool amfm) -> void;
     auto ligarDesligar(bool isLigado) -> void;

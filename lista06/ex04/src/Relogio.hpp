@@ -1,10 +1,13 @@
 #pragma once 
 
 class Relogio {
-private:
+protected:
     int _horas;
     int _minutos;
     int _segundos;
+    int _horasAlarme;
+    int _minutosAlarme;
+    int _segundosAlarme;
 
 public:
     Relogio(int hora, int minuto, int segundo): _horas{ hora }, _minutos{ minuto }, _segundos{ segundo } {};
