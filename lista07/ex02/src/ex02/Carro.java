@@ -1,14 +1,11 @@
 package ex02;
-
-import java.io.*;
-import java.util.*;
  
 class Carro implements Comparable<Carro> {
     String nome;
-    int peso;
-    int tamanho;
+    float peso;
+    float tamanho;
  
-    public Carro(String x, int y,int z)
+    public Carro(String x, float y,float z)
     {
         this.nome = x;
         this.peso = y;
@@ -17,12 +14,12 @@ class Carro implements Comparable<Carro> {
  
     public String toString()
     {
-        return "(" + nome + "," + peso + "," +  tamanho + ")";
+        return "(" + nome + ", Peso: " + peso + ",Tamanho: " +  tamanho + ")";
     }
  
+    //Compara qual carro é maior que o outro baseado no peso
     @Override public int compareTo(Carro a)
     {
-        // if the string are not equal
         if(this.peso > a.peso){
             return 1;
         }else if(this.peso == a.peso){
