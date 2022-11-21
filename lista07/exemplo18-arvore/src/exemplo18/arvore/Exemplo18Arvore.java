@@ -19,7 +19,7 @@ public class Exemplo18Arvore {
         
         strings.imprimirEmOrdem();
         
-        strings.remover("Ana");
+        strings.remover("Pedro");
         
         strings.imprimirEmOrdem();
     }

@@ -11,60 +11,39 @@ public class ABB <T extends Comparable> {
         raiz = new No<T>(valor, null, null);
     }
     
-    private No<T> acharNoFundo(No<T> atual){
-        if(atual.getDir() == null){
-            if(atual.getEsq() == null){
-                return atual;
-            }
-            return acharNoFundo(atual.getEsq());
+    private No<T> removeRec(No<T> atual, T valor){
+        if(atual == null){
+            return atual;
         }
-        return acharNoFundo(atual.getDir());
-    }
-   
-    private No<T> acharNoRec(No<T> atual, T valor){
-        if (atual == null)
-            return null; // nao encontrou
-        else
-            if (atual.getValor().compareTo(valor) == 0)
-                return atual; // encontrou
-            else // continua a busca
-                if (atual.getValor().compareTo(valor) > 0)
-                    return acharNoRec(atual.getEsq(), valor); // busca a esquerda
-                else
-                    return acharNoRec(atual.getDir(), valor); // busca a direita   
-    }
-    
-    private void removerNoFundo(No<T> atual){
-        No<T> father = atual;
-        while(true){
-            if(atual.getDir() != null){
-                father = atual;
-                atual = atual.getDir();
-                continue;
-            }
-            if(atual.getEsq() != null){
-                father = atual;
-                atual = atual.getEsq();
-                continue;
-            }
-            break;
+        
+        if(atual.getValor().compareTo(valor) > 0){
+            atual.setEsq(removeRec(atual.getEsq(), valor));
+        }else if(atual.getValor().compareTo(valor) < 0){
+            atual.setDir(removeRec(atual.getDir(), valor));
+        }else{
+            if(atual.getEsq() == null)
+                return atual.getDir();
+            else if(atual.getDir() == null)
+                return atual.getEsq();
+            
+            atual.setValor(minValue(atual.getDir()));
+            atual.setDir(removeRec(atual.getDir(), valor));
         }
-        if(father.getDir() != null){
-            father.setDir(null);
-            return;
-        }
-        father.setEsq(null);
+        
+        return atual;
     }
     
-    public boolean remover(T valor){
-        No<T> no = acharNoRec(raiz, valor);
-        if(no == null){
-            return false;
+    T minValue(No<T> atual){
+        T minv = atual.getValor();
+        while(atual.getEsq() != null){
+            minv = atual.getEsq().getValor();
+            atual = atual.getEsq();
         }
-        No<T> fundo = acharNoFundo(raiz);
-        no.setValor(fundo.getValor());
-        removerNoFundo(raiz);
-        return true;
+        return minv;
+    }
+    
+    public void remover(T valor){
+        raiz = removeRec(raiz, valor);
     }
     
     private No<T> inserirRec(No<T> atual, T valor) {
