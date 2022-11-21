@@ -72,6 +72,33 @@ public class Ex02 {
         }
         System.out.println(vs[4]+ "]");
         
+        
+        System.out.println("Trabalhando com Carros");
+        //monta vetor
+        Carro [] ca = new Carro[5];
+        ca[0] =  new Carro("celta", 1,1);
+        ca[1] = new Carro("BMW", 2,2);
+        ca[2] = new Carro("caminhao", 10,10);
+        ca[3] = new Carro("corsa", 1,1);
+        ca[4] = new Carro("virtus do weber", 1,1);
+        
+        //imprime vetor
+        System.out.print("[");
+        for(int i = 0;i<4;i++){
+            System.out.print(ca[i].toString());
+        }
+        System.out.println(ca[4].toString() + "]");
+        
+        //ordena vetor
+        insertionSort(ca);
+        
+        //imprime vetor ordenado
+        System.out.print("[");
+        for(int i = 0;i<4;i++){
+            System.out.print(ca[i].toString());
+        }
+        System.out.println(ca[4].toString() + "]");
+        
     }
     
 }
