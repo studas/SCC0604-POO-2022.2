@@ -27,7 +27,7 @@ public class Conta {
         return this.saldo;
     }
     
-    public void fazAcao(){
+    synchronized public void fazAcao(){
         for (int i = 0; i < 5000; i++) {
             deposita(10);
             saca(9);
