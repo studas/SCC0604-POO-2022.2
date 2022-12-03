@@ -2,7 +2,8 @@ package usp.ex02;
 
 /**
  *
- * @author cillor
+ * @author Matheus Cirillo (matheuscirillo@usp.br) - 12547750
+ * @version 1.0
  */
 public class Ex02 {
 
