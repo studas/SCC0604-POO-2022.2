@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.3-internal" fx:controller="ex01.ChatController">
+   <children>
+      <BorderPane layoutX="18.0" prefHeight="200.0" prefWidth="284.0" />
+      <TextField fx:id="text_field" layoutY="140.0" onAction="#sendMessage" prefHeight="26.0" prefWidth="320.0" text="Type an answer..." />
+      <Label fx:id="chat" layoutX="37.0" prefHeight="73.0" prefWidth="248.0" text="R: Last Answer" />
+      <Label fx:id="description" layoutX="36.0" layoutY="174.0" prefHeight="26.0" prefWidth="248.0" text="Press Enter to send the message" />
+   </children>
+</AnchorPane>
