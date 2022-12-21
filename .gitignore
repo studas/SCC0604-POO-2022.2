@@ -78,3 +78,5 @@ hs_err_pid*
 /lista11/ex03/Aula11_exemplo32-conexao-TCP-simples/exemplo32-conexao-TCP-simples/servidor/build/
 /lista11/ex03/Aula11_exemplo32-conexao-TCP-simples/exemplo32-conexao-TCP-simples/servidor/dist/
 /lista11/ex03/Aula11_exemplo32-conexao-TCP-simples/exemplo32-conexao-TCP-simples/servidor/nbproject/private/
+/lista11/ex02/Cliente/nbproject/private/
+/lista11/ex02/Servidor/nbproject/private/
